@@ -1,0 +1,164 @@
+//-----------------------------------------------------------------------------
+// main.c
+//	Main program body
+//-----------------------------------------------------------------------------
+
+#include <stdio.h>
+#include "STH5_LibDefc.h"
+#include "STH5_LibFonc.h"
+
+
+void	setup(void);
+void	loop(void);
+
+
+int		main(int version, char **parg)
+//---------------------------------------------------------------
+//---------------------------------------------------------------
+{
+	printf("\n +++ Hello STM_32H533 ( USER )  Version : %s  +++\n\n", (char *)version);
+
+	setup();
+	while (1) {
+		loop();
+	}
+}
+
+#define	MY_LED0	PB_0
+#define	MY_LED1	PB_1
+
+#define	MY_LED2	PB_2
+#define	MY_LED3	PB_3
+#define	MY_LED4	PB_4
+#define	MY_LED5	PB_5
+#define	MY_LED6	PB_6
+#define	MY_LED7	PB_7
+
+void	setup(void)
+//---------------------------------------------------------------
+//---------------------------------------------------------------
+{	short nerr;
+
+	(void)nerr;
+	AOLED_InitScreen(I2C_VIT_400K);
+	AOLED_AffiLogoIsep();
+
+	nerr = pinMode(STM32_LED, OUTPUT);
+	nerr = pinMode(MY_LED0, OUTPUT);
+	nerr = pinMode(MY_LED1, OUTPUT);
+	nerr = pinMode(MY_LED2, OUTPUT);
+	nerr = pinMode(MY_LED3, OUTPUT);
+	nerr = pinMode(MY_LED4, OUTPUT);
+	nerr = pinMode(MY_LED5, OUTPUT);
+	nerr = pinMode(MY_LED6, OUTPUT);
+	nerr = pinMode(MY_LED7, OUTPUT);
+	//
+	// Ajouter ici vos initialisations
+	//
+	return;
+}
+
+
+void	loop(void)
+//---------------------------------------------------------------
+//---------------------------------------------------------------
+{	short nerr;
+
+	(void)nerr;
+	//
+	// Ajouter ici votre programme
+	//
+	digitalWrite(MY_LED0, HIGH);
+	digitalWrite(MY_LED1,  LOW);
+	digitalWrite(MY_LED2, LOW);
+	digitalWrite(MY_LED3,  LOW);
+	digitalWrite(MY_LED4,  LOW);
+	digitalWrite(MY_LED5,  LOW);
+	digitalWrite(MY_LED6,  LOW);
+	digitalWrite(MY_LED7,  LOW);
+	delay(500);
+
+	digitalWrite(MY_LED0, LOW);
+	digitalWrite(MY_LED1,  HIGH);
+	digitalWrite(MY_LED2, LOW);
+	digitalWrite(MY_LED3,  LOW);
+	digitalWrite(MY_LED4,  LOW);
+	digitalWrite(MY_LED5,  LOW);
+	digitalWrite(MY_LED6,  LOW);
+	digitalWrite(MY_LED7,  LOW);
+	delay(500);
+
+	/*
+	digitalWrite(MY_LED0, LOW);
+	digitalWrite(MY_LED1, LOW);
+	digitalWrite(MY_LED13, HIGH);
+	digitalWrite(MY_LED2, LOW);
+	digitalWrite(MY_LED3, LOW);
+	digitalWrite(MY_LED4, LOW);
+	digitalWrite(MY_LED5, LOW);
+	digitalWrite(MY_LED6, LOW);
+	digitalWrite(MY_LED7, LOW);
+	delay(500);
+	*/
+
+	digitalWrite(MY_LED0, LOW);
+	digitalWrite(MY_LED1, LOW);
+    digitalWrite(MY_LED2, HIGH);
+    digitalWrite(MY_LED3, LOW);
+    digitalWrite(MY_LED4, LOW);
+    digitalWrite(MY_LED5, LOW);
+    digitalWrite(MY_LED6, LOW);
+    digitalWrite(MY_LED7, LOW);
+    delay(500);
+
+    digitalWrite(MY_LED0, LOW);
+    digitalWrite(MY_LED1, LOW);
+    digitalWrite(MY_LED2, LOW);
+    digitalWrite(MY_LED3, HIGH);
+    digitalWrite(MY_LED4, LOW);
+    digitalWrite(MY_LED5, LOW);
+    digitalWrite(MY_LED6, LOW);
+    digitalWrite(MY_LED7, LOW);
+    delay(500);
+
+    digitalWrite(MY_LED0, LOW);
+    digitalWrite(MY_LED1, LOW);
+    digitalWrite(MY_LED2, LOW);
+    digitalWrite(MY_LED3, LOW);
+    digitalWrite(MY_LED4, HIGH);
+    digitalWrite(MY_LED5, LOW);
+    digitalWrite(MY_LED6, LOW);
+    digitalWrite(MY_LED7, LOW);
+    delay(500);
+
+    digitalWrite(MY_LED0, LOW);
+    digitalWrite(MY_LED1, LOW);
+    digitalWrite(MY_LED2, LOW);
+    digitalWrite(MY_LED3, LOW);
+    digitalWrite(MY_LED4, LOW);
+    digitalWrite(MY_LED5, HIGH);
+    digitalWrite(MY_LED6, LOW);
+    digitalWrite(MY_LED7, LOW);
+    delay(500);
+
+    digitalWrite(MY_LED0, LOW);
+    digitalWrite(MY_LED1, LOW);
+    digitalWrite(MY_LED2, LOW);
+    digitalWrite(MY_LED3, LOW);
+    digitalWrite(MY_LED4, LOW);
+    digitalWrite(MY_LED5, LOW);
+    digitalWrite(MY_LED6, HIGH);
+    digitalWrite(MY_LED7, LOW);
+    delay(500);
+
+    digitalWrite(MY_LED0, LOW);
+    digitalWrite(MY_LED1, LOW);
+    digitalWrite(MY_LED2, LOW);
+    digitalWrite(MY_LED3, LOW);
+    digitalWrite(MY_LED4, LOW);
+    digitalWrite(MY_LED5, LOW);
+    digitalWrite(MY_LED6, LOW);
+    digitalWrite(MY_LED7, HIGH);
+    delay(500);
+	return;
+}

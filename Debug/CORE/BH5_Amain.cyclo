@@ -1,0 +1,5 @@
+../CORE/BH5_Amain.c:63:6:setup	2
+../CORE/BH5_Amain.c:133:6:jouer_note	1
+../CORE/BH5_Amain.c:141:6:jouer_mario	1
+../CORE/BH5_Amain.c:85:6:loop	8
+../CORE/BH5_Amain.c:54:5:main	1
