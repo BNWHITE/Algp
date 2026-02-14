@@ -59,8 +59,8 @@ all: main-build
 main-build: Test_APP_Leds.elf secondary-outputs
 
 # Tool invocations
-Test_APP_Leds.elf Test_APP_Leds.map: $(OBJS) $(USER_OBJS) D:\A1\Test_APP_Leds\LinkerScript.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "Test_APP_Leds.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m33 -T"D:\A1\Test_APP_Leds\LinkerScript.ld" --specs=nosys.specs -Wl,-Map="Test_APP_Leds.map" -Wl,--gc-sections -static -L"D:\A1\Test_APP_Leds\CORE\ALibSys"  -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Test_APP_Leds.elf Test_APP_Leds.map: $(OBJS) $(USER_OBJS) /Users/s.sy/Downloads/Test_APP_Leds/LinkerScript.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "Test_APP_Leds.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m33 -T"/Users/s.sy/Downloads/Test_APP_Leds/LinkerScript.ld" --specs=nosys.specs -Wl,-Map="Test_APP_Leds.map" -Wl,--gc-sections -static -L"/Users/s.sy/Downloads/Test_APP_Leds/CORE/ALibSys"  -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

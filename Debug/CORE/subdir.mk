@@ -16,7 +16,7 @@ C_DEPS += \
 
 # Each subdirectory must supply rules for building sources it contributes
 CORE/%.o CORE/%.su CORE/%.cyclo: ../CORE/%.c CORE/subdir.mk
-	arm-none-eabi-gcc "$<" -mcpu=cortex-m33 -std=gnu11 -g3 -c -I"D:/A1/Test_APP_Leds/CORE/ALibSys" -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@"  -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
+	arm-none-eabi-gcc "$<" -mcpu=cortex-m33 -std=gnu11 -g3 -c -I"/Users/s.sy/Downloads/Test_APP_Leds/CORE/ALibSys" -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@"  -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
 
 clean: clean-CORE
 
